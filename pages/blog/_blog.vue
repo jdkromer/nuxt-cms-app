@@ -1,7 +1,7 @@
 <template>
   <article>
-    <h1>{{ blogPost.title }}</h1>
-    <h2>{{ blogPost.date }}</h2>
+    <h2>{{ $moment(blogPost.date).format('LL') }}</h2>
+    <h3>{{ blogPost.title }}</h3>
     <div>{{ blogPost.body }}</div>
   </article>
 </template>

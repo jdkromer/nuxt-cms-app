@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ blogPosts }}
     <div v-for="blogPost in blogPosts" :key="blogPost.title">
       <nuxt-link :to="blogPost.slug">
         <ul>
