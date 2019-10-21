@@ -1,8 +1,12 @@
 <template>
-  <article>
-    <h1>{{ blogPost.title }}</h1>
-    <div>{{ blogPost.body }}</div>
-  </article>
+  <div>
+    <div v-for="blogPost in blogPosts" v-bind:key="blogPost.id">
+      <nuxt-link :to="blogPost.slug">
+        <h1>{{ blogPost.title }}</h1>
+      </nuxt-link>
+      <br />
+    </div>
+  </div>
 </template>
 <script>
 export default {
