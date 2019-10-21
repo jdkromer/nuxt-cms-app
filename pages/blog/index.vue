@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div v-for="blogPost in blogPosts" v-bind:key="blogPost.id">
+    {{ blogPosts }}
+    <div v-for="blogPost in blogPosts" :key="blogPost.title">
       <nuxt-link :to="blogPost.slug">
-        <h1>{{ blogPost.title }}</h1>
+        <ul>
+          <li>
+            <h2>{{ blogPost.title }}</h2>
+          </li>
+        </ul>
       </nuxt-link>
-      <br />
     </div>
   </div>
 </template>
